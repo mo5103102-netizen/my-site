@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Mohamed Yasser</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(120deg, #ffffff, #eafff3);
+  color: #111;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* أنيميشن خلفية */
+.bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00ff88 0%, transparent 60%);
+  animation: move 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-5%,5%); }
+  100% { transform: translate(0,0); }
+}
+
+/* الهيدر */
+header {
+  padding: 40px;
+  background: #00ff88;
+  color: black;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  margin: 0;
+}
+
+/* كروت */
+.card {
+  width: 80%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* روابط */
+a {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  padding: 15px;
+  text-decoration: none;
+  background: #00ff88;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: black;
+  color: white;
+}
+
+/* أزرار الأندية */
+.club {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 20px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.club:hover {
+  background: #00ff88;
+  color: black;
+}
+
+/* الفوتر */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+  <h1>👑 Mohamed Yasser</h1>
+  <p>أنا مش عادي… أنا أسطوري 🔥 | Legendary Mindset</p>
+</header>
+
+<div class="card">
+  👤 <b>نبذة عني</b><br>
+  صانع محتوى + عاشق للتكنولوجيا والكورة ⚽🔥
+</div>
+
+<div class="card">
+  🔗 <b>روابطي</b>
+
+  <a href="https://www.facebook.com/mohamed.yasser.602?locale=ar_AR" target="_blank">📘 فيسبوك</a>
+
+  <a href="https://www.instagram.com/mohammed.yasser11/" target="_blank">📸 انستجرام</a>
+
+  <a href="https://www.tiktok.com/@malabmo" target="_blank">🎵 تيك توك</a>
+</div>
+
+<div class="card">
+  ⚽ <b>الأندية</b><br>
+
+  <div class="club" onclick="openClub('ahly')">🦅 الأهلي</div>
+  <div class="club" onclick="openClub('real')">👑 ريال مدريد</div>
+</div>
+
+<div class="card">
+  💡 <b>حكمة اليوم</b><br>
+  <button onclick="wisdom()">اضغط هنا</button>
+  <p id="text"></p>
+</div>
+
+<footer>
+  © Mohamed Yasser - Legendary Site 🔥
+</footer>
+
+<script>
+function wisdom() {
+  let quotes = [
+    "النجاح محتاج صبر مش سرعة 💪",
+    "أنت أقوى مما تتخيل 🔥",
+    "اصنع تاريخك بنفسك 👑",
+    "لا يوجد مستحيل مع الإرادة ⚡"
+  ];
+  document.getElementById("text").innerText =
+    quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+function openClub(club) {
+  if(club === "ahly") {
+    alert("🦅 الأهلي العظيم 🔴\nالحكمة: العظمة تُصنع بالإصرار");
+    window.open("https://www.alahlyegypt.com", "_blank");
+  }
+
+  if(club === "real") {
+    alert("👑 ريال مدريد الملكي ⚪\nالحكمة: القمة لا تُمنح بل تُنتزع");
+    window.open("https://www.realmadrid.com", "_blank");
+  }
+}
+</script>
+
+</body>
+</html>
